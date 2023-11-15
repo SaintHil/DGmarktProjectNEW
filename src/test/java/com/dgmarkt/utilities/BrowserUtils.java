@@ -114,7 +114,7 @@ public class BrowserUtils {
      * @return
      */
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
-        //WebDriverWait wait = new WebDriverWait(Driver.get(), timeToWaitInSec);
+        WebDriverWait wait = new WebDriverWait(Driver.get(), timeToWaitInSec);
         //WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(20));
         return wait.until(ExpectedConditions.visibilityOf(element));
     }

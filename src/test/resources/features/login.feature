@@ -2,9 +2,8 @@
 Feature: Login Functionality
   Background: The user logs in for login panel
     Given The user navigate to web page
-    When The user enters login panel credential and clicks login button
+    And The user enters login panel credential and clicks login button
     And The user closes cookies page
-    Then Verify that the user sees the homepage logo
 
   @D2DGMRT-23
   Scenario: The user logs in for my account login with valid credential

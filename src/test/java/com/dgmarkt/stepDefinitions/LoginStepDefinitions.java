@@ -59,5 +59,4 @@ public class LoginStepDefinitions {
     public void verify_that_the_error_is_visible(String msgText) {
         Assert.assertTrue(msgText.contains("Warning: "));
     }
-
 }

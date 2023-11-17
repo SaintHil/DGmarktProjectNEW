@@ -16,12 +16,6 @@ public abstract class BasePage {
     public WebElement accountLogin_Btn;
     @FindBy(xpath = "//div[@id='logo']")
     public WebElement homeLogo_icon;
-    @FindBy(xpath = "//button[@class='btn btn-inverse btn-block btn-lg dropdown-toggle']")
-    public WebElement cartIcon_Btn;
-    @FindBy(xpath = "//ul[@class='dropdown-menu pull-right']")
-    public WebElement cartProduct_list;
-    @FindBy(xpath = "//span[text()='Category']/../..")
-    public WebElement category_Btn;
     @FindBy(xpath = "//a[@id='pt-logout-link']/..")
     public WebElement logout_Btn;
     @FindBy(xpath = "//a[text()='My Account'][1]")

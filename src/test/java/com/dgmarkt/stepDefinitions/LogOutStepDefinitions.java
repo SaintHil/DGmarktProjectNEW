@@ -4,6 +4,7 @@ import com.dgmarkt.pages.HomePage;
 import com.dgmarkt.pages.LoginPage;
 import com.dgmarkt.utilities.BrowserUtils;
 import com.dgmarkt.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -18,7 +19,7 @@ public class LogOutStepDefinitions {
         BrowserUtils.waitForClickablility(homePage.myAccount_Btn,3);
         homePage.myAccount_Btn.click();
     }
-    @When("The user clicks to Logout button")
+    @And("The user clicks to Logout button")
     public void the_user_clicks_to_logout_button() {
         Assert.assertFalse("Account logout box should not be displayed", homePage.accountLogout_box.isDisplayed());
         homePage.logout_Btn.click();

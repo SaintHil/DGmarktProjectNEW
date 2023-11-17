@@ -1,12 +1,13 @@
 @D2DGMRT-2
 Feature: Log out Functionality
+
   Background: The user is on home page
     Given The user navigate to web page
-    When The user enters login panel credential and clicks login button
+    And The user enters login panel credential and clicks login button
     And The user closes cookies page
-    When The user clicks the login under the my account
+    And The user clicks the login under the my account
     And The user enters account credentials "proje1@dgmarkt.com" and "Test12345" and clicks login
-    Then Verify that the user is on home page
+
   @D2DGMRT-27
   Scenario: The user should be able to log out
     When The user clicks to My Account button

@@ -1,5 +1,6 @@
 @D2DGMRT-1
 Feature: Login Functionality
+
   Background: The user logs in for login panel
     Given The user navigate to web page
     And The user enters login panel credential and clicks login button

@@ -25,4 +25,5 @@ public class LoginPage extends BasePage {
         password_inputBox.sendKeys(password);
         login_Btn.click();
     }
+
 }

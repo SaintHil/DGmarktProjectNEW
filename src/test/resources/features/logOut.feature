@@ -6,7 +6,7 @@ Feature: Log out Functionality
     And The user enters login panel credential and clicks login button
     And The user closes cookies page
     And The user clicks the login under the my account
-    And The user enters account credentials "proje1@dgmarkt.com" and "Test12345" and clicks login
+    When The user enters account credentials "proje1@dgmarkt.com" and "Test12345" and clicks login
 
   @D2DGMRT-27
   Scenario: The user should be able to log out

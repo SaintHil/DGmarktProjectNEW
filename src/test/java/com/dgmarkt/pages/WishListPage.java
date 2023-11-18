@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class WishListPage extends BasePage{
 
+
     @FindBy(xpath = "(//a[text()='My Account'])[1]")
     public WebElement subMyAccountBtn;
 
@@ -20,11 +21,14 @@ public class WishListPage extends BasePage{
     @FindBy(xpath = "//td[text()='Cello C1920FS 19\" LED-backlit LCD TV']//following::i[2]")
     public WebElement deleteProductCelloTv;
 
-    @FindBy(xpath = "")
-    public WebElement addProductSuccesText;
+    @FindBy(xpath = "//div[contains(text(),'Success')]")
+    public WebElement addProductSuccessMessage;
 
-    @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
-    public WebElement deleteProductSuccesText;
+    @FindBy(xpath = "//div[contains(text(),'Success: You have modified')]")
+    public WebElement deleteProductSuccessMessage;
+
+
+
 
 
 }

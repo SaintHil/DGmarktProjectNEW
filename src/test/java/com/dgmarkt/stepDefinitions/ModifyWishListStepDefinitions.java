@@ -14,17 +14,13 @@ import org.junit.Assert;
 
 public class ModifyWishListStepDefinitions {
 
-    LoginPage loginPage=new LoginPage();
-    HomePage homePage=new HomePage();
-    WishListPage wishListPage=new WishListPage();
-
+    LoginPage loginPage = new LoginPage();
+    HomePage homePage = new HomePage();
+    WishListPage wishListPage = new WishListPage();
 
     @When("The user clicks to My Account button on Home page")
     public void the_user_clicks_to_my_account_button_on_home_page() throws InterruptedException {
-        loginPage.loginPage("veliali@gmail.com","12341234");
-        Thread.sleep(2000);
         homePage.myAccount_Btn.click();
-        Thread.sleep(2000);
     }
     @When("The user clicks to My Account button under My Account submenu")
     public void the_user_clicks_to_my_account_button_under_my_account_submenu() {
@@ -38,19 +34,19 @@ public class ModifyWishListStepDefinitions {
     public void verify_that_the_user_sees_the_my_wish_list() {
         Assert.assertTrue(wishListPage.myWishListPageText.isDisplayed());
     }
-
-
     @And("The user clicks to add product button")
     public void the_user_clicks_to_add_product_button() {
         wishListPage.addProductCelloTv.click();
     }
-
-    @Then("Verify that the user sees {string} text.")
-    public void verify_that_the_user_sees_text(String arg0) {
-        Assert.assertTrue(wishListPage.addProductSuccesText.getText().contains("Success: You have modified your wish list!"));
+    @Then("Verify that the user sees success message")
+    public void verify_that_the_user_sees_success_message() {
+        Assert.assertTrue(wishListPage.addProductSuccessMessage.getText().contains("Success"));
     }
-
     @And("The user clicks to delete product button")
     public void the_user_clicks_to_delete_product_button() {
+    }
+    @Then("Verify that the user sees successfully modified message")
+    public void verify_that_the_user_sees_successfully_modified_message() {
+        Assert.assertTrue(wishListPage.deleteProductSuccessMessage.getText().contains("Success: You have modified"));
     }
 }

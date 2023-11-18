@@ -16,7 +16,6 @@ public class CategoryPage extends BasePage{
         BrowserUtils.hover(category_Btn);
     }
 
-
     @FindBy(xpath = "//a[text()='Health & Beauty']")
     public WebElement healthBeauty_Btn;
     @FindBy(xpath = "//a[text()='TV Accessories']")

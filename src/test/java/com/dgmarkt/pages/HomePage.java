@@ -12,4 +12,9 @@ public class HomePage extends BasePage{
 
     @FindBy(xpath = "//div[@class='logout-success']")
     public WebElement accountLogout_box;
+
+    @FindBy(xpath = "//a[@title='My Account']/..")
+    public WebElement myAccount_Btn;
+
+
 }

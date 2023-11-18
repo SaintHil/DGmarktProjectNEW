@@ -4,7 +4,8 @@ Feature: Modify Wish List
     Given The user navigate to web page
     And The user enters login panel credential and clicks login button
     And The user closes cookies page
-
+    And The user clicks the login under the my account
+    And  The user enters account credentials "veliali@gmail.com" and "12341234" and clicks login
 
   Scenario: The user reachs to My Wish List page from My Account
     When The user clicks to My Account button on Home page
@@ -18,7 +19,7 @@ Feature: Modify Wish List
     And The user clicks to Wish List button on the Account page
     And The user clicks to add product button
     Then Verify that the user sees "Success: You have added (…) to your shopping cart!" text.
-
+@smn
   Scenario: The user modifies to My Wish List by deleting product from My Wish List
     When The user clicks to My Account button on Home page
     And The user clicks to My Account button under My Account submenu

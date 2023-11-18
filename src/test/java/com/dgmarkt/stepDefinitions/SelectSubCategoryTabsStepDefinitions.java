@@ -15,22 +15,11 @@ import org.openqa.selenium.interactions.Actions;
 public class SelectSubCategoryTabsStepDefinitions {
 
     CategoryPage categoryPage=new CategoryPage();
-    @When("The user hover overs on Category")
-    public void the_user_hover_overs_on_category(){
-       categoryPage.hoverOverToCategoryBtn();
-
-    }
-    @When("The user clicks to {string} button")
-    public void the_user_clicks_to_button(String subCategoryName){
-        categoryPage.navigateToSubCategory(subCategoryName);
-
-    }
-    @Then("Verify that the user sees the {string} page")
-    public void verify_that_the_user_sees_the_page(String subCategoryPageText){
+    @When("The user hover overs on Category and clicks to {string}")
+    public void the_user_hover_overs_on_category_and_clicks_to(String subCategoryName) {
+        categoryPage.navigateToSubCategory(subCategoryName);    }
+    @Then("Verify that the user sees the {string}")
+    public void verify_that_the_user_sees_the(String subCategoryPageText){
         categoryPage.verifySubCategory(subCategoryPageText);
-
-
     }
-
-
 }

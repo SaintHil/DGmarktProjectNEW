@@ -27,7 +27,7 @@ public class LogOutStepDefinitions {
         homePage.logout_Btn.click();
     }
 
-    @Then("Verify that the user has securely terminated the session and sees the Account Logout Page")
+    @Then("Verify that the user has securely terminated the session and sees the account logout page")
     public void verify_that_the_user_has_securely_terminated_the_session_and_sees_the_account_logout_page() {
         BrowserUtils.waitForVisibility(homePage.accountLogout_box, 3);
         Assert.assertTrue("Account logout box should be displayed", homePage.accountLogout_box.isDisplayed());

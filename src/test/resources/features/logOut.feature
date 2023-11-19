@@ -12,7 +12,7 @@ Feature: Log out Functionality
   Scenario: The user should be able to terminated log out
     When The user click to my account button
     And The user click to logout button
-    Then Verify that the user has securely terminated the session and sees the Account Logout Page
+    Then Verify that the user has securely terminated the session and sees the account logout page
 
   @D2DGMRT-28
   Scenario: The user should be able to log out with exit button (X)

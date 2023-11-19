@@ -32,6 +32,12 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//h1[text()='Forgot Your Password?']")
     public WebElement forgotten_page_text;
 
+    @FindBy(xpath = "//h3[text()='Sign Up Newsletter']")
+    public WebElement signUpCookies_text;
+
+    @FindBy(xpath = "(//h2[text()='Login or create an account'])[1]")
+    public WebElement loginPage_text;
+
     public void loginPage(String email, String password) {
         email_inputBox.sendKeys(email);
         password_inputBox.sendKeys(password);

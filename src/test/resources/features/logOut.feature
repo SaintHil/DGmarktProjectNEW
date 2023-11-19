@@ -25,7 +25,7 @@ Feature: Log out Functionality
   Scenario: The user cannot re-login with "back to page"  icon in browser, if the user has successfully logged out
     When The user click to my account button
     And The user click to logout button
-    Then Verify that the user has securely terminated the session and sees the Account Logout Page
+    Then Verify that the user has securely terminated the session and sees the account logout page
     And  The user click to go back button
     Then Verify that successfully logged out
 

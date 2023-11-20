@@ -28,7 +28,7 @@ public class EditAccountPage extends BasePage {
     @FindBy(xpath = "//div[text()='Password confirmation does not match password!']")
     public WebElement error_MsgText1;
 
-    @FindBy(xpath = "//div[text()='Password must be between 4 and 20 characters!']")
+    @FindBy(xpath = "//*[@id='content']/form/fieldset/div[2]/div/div")
     public WebElement error_MsgText2;
 
 }

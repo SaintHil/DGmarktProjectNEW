@@ -15,6 +15,7 @@ import org.openqa.selenium.interactions.Actions;
 public class SelectSubCategoryTabsStepDefinitions {
 
     CategoryPage categoryPage=new CategoryPage();
+
     @When("The user hover overs on Category and clicks to {string}")
     public void the_user_hover_overs_on_category_and_clicks_to(String subCategoryName) {
         categoryPage.navigateToSubCategory(subCategoryName);    }

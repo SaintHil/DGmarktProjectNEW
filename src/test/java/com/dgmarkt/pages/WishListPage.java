@@ -27,6 +27,12 @@ public class WishListPage extends BasePage{
     @FindBy(xpath = "//div[contains(text(),'Success: You have modified')]")
     public WebElement deleteProductSuccessMessage;
 
+    @FindBy(xpath = "(//i[@class='fa fa-shopping-cart'])[1]")
+    public WebElement addProduct;
+
+    @FindBy(xpath = "(//i[@class='fa fa-times'])[1]")
+    public WebElement deleteProduct;
+
 
 
 

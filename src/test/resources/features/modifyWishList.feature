@@ -7,7 +7,7 @@ Feature: Modify Wish List
     And The user closes cookies page
     And The user clicks the login under the my account
     And  The user enters account credentials "veliali@gmail.com" and "12341234" and clicks login
-    And The user clicks to My Account button on Home page
+    And The user clicks to My Account button
     And The user clicks to My Account button under My Account submenu
     And The user clicks to Wish List button on the Account page
 

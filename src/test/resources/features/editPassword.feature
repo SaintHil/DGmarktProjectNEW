@@ -25,7 +25,7 @@ Feature: Edit Password
     And The user enters the same invalid password "<ConfirmPassword>" into the confirm input box
     And The user clicks on Continue button
     Then Verify that password is NOT changed "<message1>" displayed
-    Then Verify that password is NOT changed "<message2>" seen
+    And  Verify that password is NOT changed "<message2>" seen
     Examples:
       | Password | ConfirmPassword | message1                                      | message2                                       |
       | 123ABC   | 123XXX          |                                               | Password confirmation does not match password! |

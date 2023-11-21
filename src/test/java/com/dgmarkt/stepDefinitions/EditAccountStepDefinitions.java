@@ -73,7 +73,7 @@ public class EditAccountStepDefinitions {
 
     }
 
-    @Then("Verify that password is NOT changed {string} seen")
+    @And("Verify that password is NOT changed {string} seen")
     public void Verify_that_password_is_NOT_changed_seen(String MsgText2) {
         Assert.assertTrue(editAccountPage.error_MsgText2.getText().contains("Password"));
 

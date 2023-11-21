@@ -27,9 +27,9 @@ public class EditAccountPage extends BasePage{
     public WebElement firstName_Btn;
     @FindBy(xpath= "//input[@id='input-lastname']")
     public WebElement lastName_Btn;
-    @FindBy(xpath= "//input[@id='input-email']")
+    @FindBy(css = "#input-email")
     public WebElement email_Btn;
-    @FindBy(xpath= "//input[@id='input-telephone']")
+    @FindBy(css = "#input-telephone")
     public WebElement telephone_Btn;
     @FindBy(xpath= "//input[@value='Continue']")
     public WebElement continueBtn;
@@ -54,9 +54,9 @@ public class EditAccountPage extends BasePage{
         lastName_Btn.sendKeys("oguz");
         email_Btn.clear();BrowserUtils.waitFor(2);
        // BrowserUtils.scrollToElement(email_Btn);
-        email_Btn.sendKeys(ConfigurationReader.get("nesibe@ogux.sss"));
+        email_Btn.sendKeys("nesibe@ogux.sss");
         telephone_Btn.clear();BrowserUtils.waitFor(2);
-        telephone_Btn.sendKeys(ConfigurationReader.get("123456"));
+        telephone_Btn.sendKeys("123456");
        // continueBtn.click();
     }
     public void verifyMessage(String expectedMessage) {

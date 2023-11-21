@@ -11,6 +11,9 @@ public class WishListStepDefinitions {
 
     WishListPage wishListPage = new WishListPage();
 
+
+
+
     @When("The user clicks on the Wish List")
     public void the_user_clicks_on_the_wish_list() {
         wishListPage.wishIcon.click();

@@ -48,12 +48,16 @@ public class EditAccountPage extends BasePage{
     public void dataStandardizesLogin(){
         editAccountBtn.click();
         firstName_Btn.clear();
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(2);
         firstName_Btn.sendKeys("nesibe");
-        lastName_Btn.clear();
+        lastName_Btn.clear();BrowserUtils.waitFor(2);
         lastName_Btn.sendKeys("oguz");
-        email_inputBtn.clear();
-        email_inputBtn.sendKeys(ConfigurationReader.get("loginEmail"));
+        email_Btn.clear();BrowserUtils.waitFor(2);
+        BrowserUtils.scrollToElement(email_Btn);
+        email_Btn.sendKeys(ConfigurationReader.get("nesibe@ogux.sss"));
+        telephone_Btn.clear();BrowserUtils.waitFor(2);
+        telephone_Btn.sendKeys(ConfigurationReader.get("123456"));
+       // continueBtn.click();
     }
     public void verifyMessage(String expectedMessage) {
         WebElement element = Driver.get().findElement((By.xpath("//*[text()=' " + expectedMessage + "']")));

@@ -31,13 +31,12 @@ public class EditAccountStepDefinitions {
     }
     @Then("Verify that you can receive my account alert message {string}")
     public void verify_that_you_can_receive_my_account_alert_message(String message) {
-        editAccountPage.errorVerifyMessage(message);
+        editAccountPage.getDisappearingWarningMessage(message);
     }
     @Then("The use standardizes login data")
     public void the_use_standardizes_login_data() {
         editAccountPage.dataStandardizesLogin();
     }
-
     @Given("The user clicks on my account in the my account subcategory")
     public void the_user_clicks_on_my_account_in_the_my_account_subcategory() {
         editAccountPage.myAccount_Btn.click();

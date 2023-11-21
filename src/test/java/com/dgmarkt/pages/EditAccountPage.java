@@ -9,16 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class EditAccountPage extends BasePage{
-    @FindBy(xpath= "//span[text()='My Account']")
-    public WebElement MyAccountBtn;
-    @FindBy(id= "pt-login-link")
-    public WebElement loginBtn;
     @FindBy(xpath= "//input[@id='input-email']")
     public WebElement email_inputBtn;
-    @FindBy(xpath= "//input[@id='input-password']")
-    public WebElement password_inputBtn;
-    @FindBy(xpath = "(//button[@class='button btn'])[1]")
-    public WebElement login_clickBtn;
     @FindBy(xpath= "(//a[text()='My Account'])[1]")
     public WebElement childMyAccountBtn;
     @FindBy(xpath= "//a[text()='Edit Account']")
@@ -33,8 +25,8 @@ public class EditAccountPage extends BasePage{
     public WebElement telephone_Btn;
     @FindBy(xpath= "//input[@value='Continue']")
     public WebElement continueBtn;
-    @FindBy(linkText = " Success: Your account has been successfully updated.")
-    public WebElement successVerify;
+    @FindBy(className = "text-danger")
+    public WebElement blankInputWarningMessage;
     public void editMyAccountLogin(String firstName, String lastName, String email, String telefon){
         firstName_Btn.clear();
         firstName_Btn.sendKeys(firstName);
@@ -53,11 +45,9 @@ public class EditAccountPage extends BasePage{
         lastName_Btn.clear();BrowserUtils.waitFor(2);
         lastName_Btn.sendKeys("oguz");
         email_Btn.clear();BrowserUtils.waitFor(2);
-       // BrowserUtils.scrollToElement(email_Btn);
         email_Btn.sendKeys("nesibe@ogux.sss");
         telephone_Btn.clear();BrowserUtils.waitFor(2);
         telephone_Btn.sendKeys("123456");
-       // continueBtn.click();
     }
     public void verifyMessage(String expectedMessage) {
         WebElement element = Driver.get().findElement((By.xpath("//*[text()=' " + expectedMessage + "']")));
@@ -65,9 +55,16 @@ public class EditAccountPage extends BasePage{
         Assert.assertEquals(acutuelMessage, expectedMessage);
 
     }
-    public void errorVerifyMessage(String expectedMessage) {
-        WebElement element = Driver.get().findElement((By.xpath("//div[text()='" + expectedMessage + "']")));
-        String acutuelMessage = element.getText();
-        Assert.assertEquals(acutuelMessage, expectedMessage);
+    /**Getting POP-UP messages
+     * and control that if contains valid or @*/
+    public void getDisappearingWarningMessage(String message) {
+        String actualMessage;
+        if (message.contains("@")) {
+            actualMessage = email_inputBtn.getAttribute("validationMessage");
+            System.out.println("actualMessage = " + actualMessage);
+        } else if (message.contains("valid")) {
+            actualMessage = blankInputWarningMessage.getText();
+            System.out.println("actualMessage = " + actualMessage);
+        }
     }
 }

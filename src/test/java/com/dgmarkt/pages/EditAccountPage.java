@@ -17,9 +17,9 @@ public class EditAccountPage extends BasePage{
     public WebElement email_inputBtn;
     @FindBy(xpath= "//input[@id='input-password']")
     public WebElement password_inputBtn;
-    @FindBy(linkText = "Login")
+    @FindBy(xpath = "(//button[@class='button btn'])[1]")
     public WebElement login_clickBtn;
-    @FindBy(xpath= "(//a[contains(.,'My Account')])[2]")
+    @FindBy(xpath= "(//a[text()='My Account'])[1]")
     public WebElement childMyAccountBtn;
     @FindBy(xpath= "//a[text()='Edit Account']")
     public WebElement editAccountBtn;
@@ -53,7 +53,7 @@ public class EditAccountPage extends BasePage{
         lastName_Btn.clear();BrowserUtils.waitFor(2);
         lastName_Btn.sendKeys("oguz");
         email_Btn.clear();BrowserUtils.waitFor(2);
-        BrowserUtils.scrollToElement(email_Btn);
+       // BrowserUtils.scrollToElement(email_Btn);
         email_Btn.sendKeys(ConfigurationReader.get("nesibe@ogux.sss"));
         telephone_Btn.clear();BrowserUtils.waitFor(2);
         telephone_Btn.sendKeys(ConfigurationReader.get("123456"));

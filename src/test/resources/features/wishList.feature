@@ -13,12 +13,12 @@ Feature: Like Icon (Wish list) Function
   Scenario:The User should be able to see products in the Wish List
     Then Verify that The products in the Wish list are visible
 
-  @AddPrdct
+  @D2DGMRT-38
   Scenario:User can be able to add products from Wish List to Add to Cart
     When The user clicks on the first product`s Add button
     Then Verify that the product is added to the Cart successfully
 
-  @DltPrdct
+  @D2DGMRT-39
   Scenario:The user should be able to delete products from the Wish List
     When The user clicks on the first product`s Remove button
     Then Verify that the success message is displayed

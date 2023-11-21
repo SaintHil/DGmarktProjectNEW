@@ -48,8 +48,8 @@ public class EditAccountStepDefinitions {
         BrowserUtils.waitFor(2);
     }
 
-    @Then("Verify that password updated success message is displayed")
-    public void verify_that_password_updated_success_message_is_displayed() {
+    @Then("Verify that updated success message for password is displayed")
+    public void verify_that_updated_message_for_password_is_displayed() {
         Assert.assertTrue(editAccountPage.successMsg.isDisplayed());
         BrowserUtils.waitFor(2);
 

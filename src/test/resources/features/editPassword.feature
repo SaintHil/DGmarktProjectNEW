@@ -12,13 +12,14 @@ Feature: Edit Password
     And The user clicks on My Account under My Account
     And The user clicks on Change Password link
 
+  @D2DGMRT-40
   Scenario: The user should be able to change password with confirm password
     When The user enters new password "123ABC" into the password input box
     And The user enters the same password "123ABC" into the confirm input box
     And The user clicks on Continue button
-    Then Verify that password updated success message is displayed
+    Then Verify that updated success message for password is displayed
 
-
+  @D2DGMRT-41
   Scenario Outline: The user should be able to not changed with different Credentials
     When The user enters invalid password "<Password>" into the password input box
     And The user enters the same invalid password "<ConfirmPassword>" into the confirm input box

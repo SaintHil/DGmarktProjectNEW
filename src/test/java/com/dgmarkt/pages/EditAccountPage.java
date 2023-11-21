@@ -1,5 +1,10 @@
 package com.dgmarkt.pages;
 
+import com.dgmarkt.utilities.BrowserUtils;
+import com.dgmarkt.utilities.ConfigurationReader;
+import com.dgmarkt.utilities.Driver;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -30,4 +35,35 @@ public class EditAccountPage extends BasePage{
     public WebElement continueBtn;
     @FindBy(linkText = " Success: Your account has been successfully updated.")
     public WebElement successVerify;
+    public void editMyAccountLogin(String firstName, String lastName, String email, String telefon){
+        firstName_Btn.clear();
+        firstName_Btn.sendKeys(firstName);
+        lastName_Btn.clear();
+        lastName_Btn.sendKeys(lastName);
+        email_Btn.clear();
+        email_Btn.sendKeys(email);
+        telephone_Btn.clear();
+        telephone_Btn.sendKeys(telefon);
+    }
+    public void dataStandardizesLogin(){
+        editAccountBtn.click();
+        firstName_Btn.clear();
+        BrowserUtils.waitFor(1);
+        firstName_Btn.sendKeys("nesibe");
+        lastName_Btn.clear();
+        lastName_Btn.sendKeys("oguz");
+        email_inputBtn.clear();
+        email_inputBtn.sendKeys(ConfigurationReader.get("loginEmail"));
+    }
+    public void verifyMessage(String expectedMessage) {
+        WebElement element = Driver.get().findElement((By.xpath("//*[text()=' " + expectedMessage + "']")));
+        String acutuelMessage = element.getText();
+        Assert.assertEquals(acutuelMessage, expectedMessage);
+
+    }
+    public void errorVerifyMessage(String expectedMessage) {
+        WebElement element = Driver.get().findElement((By.xpath("//div[text()='" + expectedMessage + "']")));
+        String acutuelMessage = element.getText();
+        Assert.assertEquals(acutuelMessage, expectedMessage);
+    }
 }

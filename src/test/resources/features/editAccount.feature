@@ -1,5 +1,6 @@
+@D2DGMRT-8
 Feature: My account edit Functionality
-
+@D2DGMRT-49
   Background: The user is on home page
     Given The user navigate to web page
     And The user enters login panel credential and clicks login button
@@ -8,7 +9,7 @@ Feature: My account edit Functionality
     And The user enters account credentials "nesibe@ogux.sss" and "test1234" and clicks login
     And The user clicks on my account in the my account subcategory
     And The user clicks on the Edit Account button
-
+@D2DGMRT-45
   Scenario Outline: The user should be able to update the My Account on the DgMarkt website.
     When The user clicks on "<FirstName>" box,"<LastName>" box,"<Email>" box,"<Telephone>" box select enters valid data
     And The user click continue button

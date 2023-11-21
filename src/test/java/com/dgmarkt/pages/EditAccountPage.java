@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static org.junit.Assert.assertEquals;
+
 public class EditAccountPage extends BasePage{
     @FindBy(xpath= "//input[@id='input-email']")
     public WebElement email_inputBtn;
@@ -52,7 +54,7 @@ public class EditAccountPage extends BasePage{
     public void verifyMessage(String expectedMessage) {
         WebElement element = Driver.get().findElement((By.xpath("//*[text()=' " + expectedMessage + "']")));
         String acutuelMessage = element.getText();
-        Assert.assertEquals(acutuelMessage, expectedMessage);
+        assertEquals(acutuelMessage, expectedMessage);
 
     }
     /**Getting POP-UP messages
@@ -66,5 +68,10 @@ public class EditAccountPage extends BasePage{
             actualMessage = blankInputWarningMessage.getText();
             System.out.println("actualMessage = " + actualMessage);
         }
+    }
+    public void verifyGetWarningMessage(String expectedMessage) {
+        BrowserUtils.waitForVisibility(blankInputWarningMessage, 3);
+        String actualWarningMessage = blankInputWarningMessage.getText();
+        assertEquals("Messages does NOT match",expectedMessage, actualWarningMessage);
     }
 }

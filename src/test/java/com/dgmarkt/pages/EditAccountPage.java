@@ -27,8 +27,8 @@ public class EditAccountPage extends BasePage{
     public WebElement telephone_Btn;
     @FindBy(xpath= "//input[@value='Continue']")
     public WebElement continueBtn;
-    @FindBy(className = "text-danger")
-    public WebElement blankInputWarningMessage;
+    @FindBy(xpath = "//div[text()='E-Mail Address does not appear to be valid!']")
+    public WebElement emailRedWarningMessage;
     public void editMyAccountLogin(String firstName, String lastName, String email, String telefon){
         firstName_Btn.clear();
         firstName_Btn.sendKeys(firstName);
@@ -52,7 +52,7 @@ public class EditAccountPage extends BasePage{
         telephone_Btn.sendKeys("123456");
     }
     public void verifyMessage(String expectedMessage) {
-        WebElement element = Driver.get().findElement((By.xpath("//*[text()=' " + expectedMessage + "']")));
+        WebElement element = Driver.get().findElement((By.xpath("//*[text()='"+ expectedMessage +"']")));
         String acutuelMessage = element.getText();
         assertEquals(acutuelMessage, expectedMessage);
 
@@ -61,17 +61,17 @@ public class EditAccountPage extends BasePage{
      * and control that if contains valid or @*/
     public void getDisappearingWarningMessage(String message) {
         String actualMessage;
-        if (message.contains("@")) {
+        if (message.contains(".")) {
             actualMessage = email_inputBtn.getAttribute("validationMessage");
             System.out.println("actualMessage = " + actualMessage);
-        } else if (message.contains("valid")) {
-            actualMessage = blankInputWarningMessage.getText();
+        }else if (message.contains("valid")) {
+            actualMessage = emailRedWarningMessage.getText();
             System.out.println("actualMessage = " + actualMessage);
         }
     }
     public void verifyGetWarningMessage(String expectedMessage) {
-        BrowserUtils.waitForVisibility(blankInputWarningMessage, 3);
-        String actualWarningMessage = blankInputWarningMessage.getText();
-        assertEquals("Messages does NOT match",expectedMessage, actualWarningMessage);
+        BrowserUtils.waitForVisibility(emailRedWarningMessage, 3);
+        String actualWarningMessage = emailRedWarningMessage.getText();
+        assertEquals("E-Mail Address does not",expectedMessage, actualWarningMessage);
     }
 }

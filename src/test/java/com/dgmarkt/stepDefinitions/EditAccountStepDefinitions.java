@@ -31,7 +31,7 @@ public class EditAccountStepDefinitions {
     }
     @Then("Verify that you can receive my account alert message {string}")
     public void verify_that_you_can_receive_my_account_alert_message(String message) {
-        editAccountPage.getDisappearingWarningMessage(message);
+        editAccountPage.verifyMessage(message);
     }
     @Then("The use standardizes login data")
     public void the_use_standardizes_login_data() {
@@ -41,6 +41,11 @@ public class EditAccountStepDefinitions {
     public void the_user_clicks_on_my_account_in_the_my_account_subcategory() {
         editAccountPage.myAccount_Btn.click();
         editAccountPage.childMyAccountBtn.click();
+    }
+
+    @Then("Verify that you can get my account warning message email {string}")
+    public void verifyThatYouCanGetMyAccountWarningMessageEmail(String message) {
+        editAccountPage.getDisappearingWarningMessage(message);
     }
 }
 

@@ -1,4 +1,3 @@
-
 Feature: My account edit Functionality
 
 
@@ -35,16 +34,29 @@ Feature: My account edit Functionality
     Then Verify that you can receive my account alert message "<message>"
     And The use standardizes login data
     Examples:
-      | FirstName                            | LastName                             | Email           | Telephone                         | message                                                                               |
-      |                                      | oguz                                 | nesibe@ogux.sss | 123                               | First Name must be between 1 and 32 characters!                                       |
-      | nesibenesibenesibenesibenesibenesibe | oguz                                 | nesibe@ogux.sss | 123                               | First Name must be between 1 and 32 characters!                                       |
-      | nesibe                               |                                      | nesibe@ogux.sss | 123                               | Last Name must be between 1 and 32 characters!                                        |
-      | nesibe                               | oguzoguzoguzoguzoguzoguzoguzoguzoguz | nesibe@ogux.sss | 123                               | Last Name must be between 1 and 32 characters!                                        |
-      | nesibe                               | oguz                                 | n.oguz          | 123                               | Lütfen e-posta adresine bir "@" işareti ekleyin. "n.oguz" adresinde "@" eksik.        |
-      | nesibe                               | oguz                                 | n.oguz@         | 123                               | Lütfen "@" işaretinden sonra geln kısmı ekleyin. "n.oguz@", tam bir adres değil.      |
-      | nesibe                               | oguz                                 | n.oguz@gmail    | 123                               | Lütfen "@" işaretinden sonra geln kısmı ekleyin. "n.oguz@gmail", tam bir adres değil. |
-      | nesibe                               | oguz                                 | n.oguz@gmail.   | 123                               | ".", "gmail." adı içinde yanlış bir konumda kullanılmış.                              |
-      | nesibe                               | oguz                                 | nesibe@ogux.sss |                                   | Telephone must be between 3 and 32 characters!                                        |
-      | nesibe                               | oguz                                 | nesibe@ogux.sss | 1                                 | Telephone must be between 3 and 32 characters!                                        |
-      | nesibe                               | oguz                                 | nesibe@ogux.sss | 12                                | Telephone must be between 3 and 32 characters!                                        |
-      | nesibe                               | oguz                                 | nesibe@ogux.sss | 123456789012345678901234567890123 | Telephone must be between 3 and 32 characters!                                        |
+      | FirstName                            | LastName                             | Email           | Telephone                         | message                                         |
+      |                                      | oguz                                 | nesibe@ogux.sss | 123                               | First Name must be between 1 and 32 characters! |
+      | nesibenesibenesibenesibenesibenesibe | oguz                                 | nesibe@ogux.sss | 123                               | First Name must be between 1 and 32 characters! |
+      | nesibe                               |                                      | nesibe@ogux.sss | 123                               | Last Name must be between 1 and 32 characters!  |
+      | nesibe                               | oguzoguzoguzoguzoguzoguzoguzoguzoguz | nesibe@ogux.sss | 123                               | Last Name must be between 1 and 32 characters!  |
+      | nesibe                               | oguz                                 | nesibe@ogux.sss |                                   | Telephone must be between 3 and 32 characters!  |
+      | nesibe                               | oguz                                 | nesibe@ogux.sss | 1                                 | Telephone must be between 3 and 32 characters!  |
+      | nesibe                               | oguz                                 | nesibe@ogux.sss | 12                                | Telephone must be between 3 and 32 characters!  |
+      | nesibe                               | oguz                                 | nesibe@ogux.sss | 123456789012345678901234567890123 | Telephone must be between 3 and 32 characters!  |
+
+  Scenario Outline: The user should not be able to update the My Account section on the DgMarkt site with incorrect information.
+    When The user clicks on the Edit Account button
+    And The user clicks on "<FirstName>" box,"<LastName>" box,"<Email>" box,"<Telephone>" box select enters invalid data
+    And The user click continue button
+    Then Verify that you can get my account warning message email "<message>"
+    And The use standardizes login data
+    Examples:
+      | FirstName | LastName | Email         | Telephone | message                                                                                |
+      | nesibe    | oguz     | n.oguz        | 123       | Lütfen e-posta adresine bir "@" işareti ekleyin. "n.oguz" adresinde "@" eksik.         |
+      | nesibe    | oguz     | n.oguz@       | 123       | Lütfen "@" işaretinden sonra gelen kısmı ekleyin. "n.oguz@", tam bir adres değil.      |
+      | nesibe    | oguz     | n.oguz@gmail  | 123       | Lütfen "@" işaretinden sonra gelen kısmı ekleyin. "n.oguz@gmail", tam bir adres değil. |
+      | nesibe    | oguz     | n.oguz@gmail. | 123       | ".", "gmail." adı içinde yanlış bir konumda kullanılmış.                               |
+      | nesibe    | oguz     | n.oguz        | 123       | E-Mail Address does not appear to be valid!                                            |
+      | nesibe    | oguz     | n.oguz@       | 123       | E-Mail Address does not appear to be valid!                                            |
+      | nesibe    | oguz     | n.oguz@gmail  | 123       | E-Mail Address does not appear to be valid!                                            |
+      | nesibe    | oguz     | n.oguz@gmail. | 123       | E-Mail Address does not appear to be valid!                                            |

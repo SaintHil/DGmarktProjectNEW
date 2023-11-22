@@ -94,39 +94,6 @@ public class AddressBookPage extends BasePage{
             selectCountryRegion_mtd(Country, Region);
         }
 
-        public void deleteAdress() {
-
-            for (WebElement element : delete_BtnList) {
-                element.click();
-            }
-        }
-
-        public void deleteBtn_mtd() {
-        /*for (int i = 1; i < delete_BtnList.size(); i++) {
-            WebElement element = Driver.get().findElement((By.xpath("(//a[text()='Delete'])[" + i + "]")));
-            element.click();
-            BrowserUtils.waitFor(2);
-            Alert alert = driver.switchTo().alert();
-            alert.accept();
-            BrowserUtils.waitFor(2);
-
-        }*/
-            while (delete_BtnList.size() > 2) {
-                if (deleteMessage.isDisplayed()) {
-                    System.out.println(delete_BtnList.size());
-                    WebElement element = Driver.get().findElement((By.xpath("(//a[text()='Delete'])[1]")));
-                    element.click();
-                    BrowserUtils.waitFor(2);
-                    Alert alert = driver.switchTo().alert();
-                    alert.accept();
-                    BrowserUtils.waitFor(2);
-
-                } else if (warningMessage.isDisplayed()) {
-                    break;
-                }
-            }
-        }
-
         public void verifyMessage(String expectedMessage) {
             WebElement element = Driver.get().findElement((By.xpath("//*[text()=' " + expectedMessage + "']")));
             String acutuelMessage = element.getText();

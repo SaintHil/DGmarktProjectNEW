@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class EditAccountPage extends BasePage{
     @FindBy(xpath= "//input[@id='input-email']")
@@ -53,20 +54,28 @@ public class EditAccountPage extends BasePage{
     }
     public void verifyMessage(String expectedMessage) {
         WebElement element = Driver.get().findElement((By.xpath("//*[text()='"+ expectedMessage +"']")));
-        String acutuelMessage = element.getText();
-        assertEquals(acutuelMessage, expectedMessage);
+        BrowserUtils.waitFor(1);
+        String actualMessage = element.getText();
+        System.out.println("actualMessage = " + actualMessage);
+        assertEquals(actualMessage, expectedMessage);
 
     }
     /**Getting POP-UP messages
      * and control that if contains valid or @*/
     public void getDisappearingWarningMessage(String message) {
-        String actualMessage;
+
+        String actualMessage1="";
+        String actualMessage2="";
         if (message.contains(".")) {
-            actualMessage = email_inputBtn.getAttribute("validationMessage");
-            System.out.println("actualMessage = " + actualMessage);
-        }else if (message.contains("valid")) {
-            actualMessage = emailRedWarningMessage.getText();
-            System.out.println("actualMessage = " + actualMessage);
+            BrowserUtils.waitFor(4);
+            actualMessage1 = email_inputBtn.getAttribute("validationMessage");
+            System.out.println("actualMessage = " + actualMessage1);
+            assertTrue(actualMessage1.contains(message));
+
+        }else if (message.contains("valid")) {BrowserUtils.waitFor(2);
+            actualMessage2 = emailRedWarningMessage.getText();
+            System.out.println("actualMessage = " + actualMessage2);
+            assertTrue(actualMessage2.contains(message));
         }
     }
     public void verifyGetWarningMessage(String expectedMessage) {

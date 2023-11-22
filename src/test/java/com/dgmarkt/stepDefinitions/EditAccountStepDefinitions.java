@@ -43,9 +43,10 @@ public class EditAccountStepDefinitions {
         editAccountPage.childMyAccountBtn.click();
     }
 
-    @Then("Verify that you can get my account warning message email {string}")
-    public void verifyThatYouCanGetMyAccountWarningMessageEmail(String message) {
-        editAccountPage.getDisappearingWarningMessage(message);
+
+    @Then("The warning message contains {string}")
+    public void theWarningMessageContainsMessage(String message) {
+    editAccountPage.getDisappearingWarningMessage(message);
     }
 }
 

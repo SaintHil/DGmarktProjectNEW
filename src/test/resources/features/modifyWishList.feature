@@ -2,11 +2,7 @@
 Feature: Modify Wish List
 
   Background:The user is on the home page
-    Given The user navigate to web page
-    And The user enters login panel credential and clicks login button
-    And The user closes cookies page
-    And The user clicks the login under the my account
-    And  The user enters account credentials "veliali@gmail.com" and "12341234" and clicks login
+    Given The user is logged in with credentials "veliali@gmail.com" and "12341234"
     And The user clicks to My Account button
     And The user clicks to My Account button under My Account submenu
     And The user clicks to Wish List button on the Account page

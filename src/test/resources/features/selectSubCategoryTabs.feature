@@ -1,12 +1,8 @@
 
 Feature: Select Sub Category Tabs under Category Module
 
-  Background:The user is on the home page
-    Given The user navigate to web page
-    And The user enters login panel credential and clicks login button
-    And The user closes cookies page
-    And The user clicks the login under the my account
-    And  The user enters account credentials "veliali@gmail.com" and "12341234" and clicks login
+  Background: The user is on home page
+    Given The user is logged in with valid credentials "veliali@gmail.com" and "12341234"
 
   Scenario Outline: The user navigates to Sub Category Tabs from Category button on Homepage
     When The user hover overs on Category and clicks to "<subCategoryName>"

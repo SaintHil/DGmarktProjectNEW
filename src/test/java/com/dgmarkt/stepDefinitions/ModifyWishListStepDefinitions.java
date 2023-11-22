@@ -44,4 +44,8 @@ public class ModifyWishListStepDefinitions {
     public void verify_that_the_user_sees_successfully_modified_message() {
         Assert.assertTrue(wishListPage.successMsg.getText().contains("Success: You have modified"));
     }
+    @Given("The user is logged in with credentials {string} and {string}")
+    public void the_user_is_logged_in_with_credentials_and(String email, String password) {
+
+    }
 }

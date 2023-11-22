@@ -43,13 +43,13 @@ public class EditAccountPage extends BasePage{
     public void dataStandardizesLogin(){
         editAccountBtn.click();
         firstName_Btn.clear();
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(1);
         firstName_Btn.sendKeys("nesibe");
-        lastName_Btn.clear();BrowserUtils.waitFor(2);
+        lastName_Btn.clear();BrowserUtils.waitFor(1);
         lastName_Btn.sendKeys("oguz");
-        email_Btn.clear();BrowserUtils.waitFor(2);
+        email_Btn.clear();BrowserUtils.waitFor(1);
         email_Btn.sendKeys("nesibe@ogux.sss");
-        telephone_Btn.clear();BrowserUtils.waitFor(2);
+        telephone_Btn.clear();BrowserUtils.waitFor(1);
         telephone_Btn.sendKeys("123456");
     }
     public void verifySuccesMessage(String expectedMessage) {
@@ -66,10 +66,7 @@ public class EditAccountPage extends BasePage{
         System.out.println("actualMessage = " + actualMessage);
         assertEquals(actualMessage, expectedMessage);
     }
-    /**Getting POP-UP messages
-     * and control that if contains valid or @*/
     public void getDisappearingWarningMessage(String message) {
-
         String actualMessage1="";
         String actualMessage2="";
         if (message.contains(".")) {

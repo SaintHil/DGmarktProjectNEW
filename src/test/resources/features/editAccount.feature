@@ -1,5 +1,5 @@
+@nsb
 Feature: My account edit Functionality
-
 
   Background: The user is on home page
     Given The user navigate to web page

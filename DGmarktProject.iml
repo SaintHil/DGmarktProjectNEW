@@ -50,10 +50,6 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents.client5:httpclient5:5.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents.core5:httpcore5:5.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents.core5:httpcore5-h2:5.2" level="project" />
-    <orderEntry type="library" name="Maven: com.github.javafaker:javafaker:1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:android:1.23" level="project" />
-    <orderEntry type="library" name="Maven: com.github.mifmif:generex:1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: dk.brics.automaton:automaton:1.11-8" level="project" />
     <orderEntry type="library" name="Maven: io.cucumber:cucumber-java:7.11.1" level="project" />
     <orderEntry type="library" name="Maven: io.cucumber:cucumber-core:7.11.1" level="project" />
     <orderEntry type="library" name="Maven: io.cucumber:cucumber-gherkin:7.11.1" level="project" />

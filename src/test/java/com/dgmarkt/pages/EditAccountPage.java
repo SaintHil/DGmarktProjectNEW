@@ -1,13 +1,10 @@
 package com.dgmarkt.pages;
 
 import com.dgmarkt.utilities.BrowserUtils;
-import com.dgmarkt.utilities.ConfigurationReader;
 import com.dgmarkt.utilities.Driver;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -84,10 +81,5 @@ public class EditAccountPage extends BasePage{
             System.out.println("actualMessage = " + actualMessage2);
             assertTrue(actualMessage2.contains(message));
         }
-    }
-    public void verifyGetWarningMessage(String expectedMessage) {
-        BrowserUtils.waitForVisibility(emailRedWarningMessage, 3);
-        String actualWarningMessage = emailRedWarningMessage.getText();
-        assertEquals("E-Mail Address does not",expectedMessage, actualWarningMessage);
     }
 }

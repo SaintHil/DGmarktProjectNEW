@@ -13,7 +13,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
     private Driver() {}
-    private static WebDriver driver;
+    public static WebDriver driver;
     public static WebDriver get() {
         if (driver == null) {
             String browser = ConfigurationReader.get("browser");

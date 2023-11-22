@@ -2,11 +2,7 @@
 Feature: Edit Password
 
   Background: The user is on home page
-    Given The user navigate to web page
-    And The user enters login panel credential and clicks login button
-    And The user closes cookies page
-    And The user clicks the login under the my account
-    And The user enters account credentials "sainthill599@gmail.com" and "123ABC" and clicks login
+    Given The user is logged in with valid credentials "sainthill599@gmail.com" and "123ABC"
 
     When The user clicks on My Account
     And The user clicks on My Account under My Account
@@ -23,7 +19,7 @@ Feature: Edit Password
   Scenario Outline: The user should be able to not changed with different Credentials
     When The user enters invalid password "<Password>" into the password input box
     And The user enters the same invalid password "<ConfirmPassword>" into the confirm input box
-    And The user clicks on Continue button
+    And The user click on Continue button
     Then Verify that password is NOT changed "<message1>" displayed
     And  Verify that password is NOT changed "<message2>" seen
     Examples:

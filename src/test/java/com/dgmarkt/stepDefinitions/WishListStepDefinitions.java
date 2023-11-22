@@ -11,23 +11,20 @@ public class WishListStepDefinitions {
 
     WishListPage wishListPage = new WishListPage();
 
-
-
-
     @When("The user clicks on the Wish List")
     public void the_user_clicks_on_the_wish_list() {
         wishListPage.wishIcon.click();
         BrowserUtils.waitFor(2);
     }
 
-    @Then("Verify that The products in the Wish list are visible")
-    public void verify_that_the_products_in_the_wish_list_are_visible() {
-        //Assert.assertFalse(wishListPage.wishProductTable.isEmpty());
-        Assert.assertTrue(wishListPage.wishProductTable.size() > 0);
+    @Then("Verify that the products in the Wish List are visible")
+    public void Verify_that_the_products_in_the_Wish_List_are_visible() {
+        Assert.assertFalse(wishListPage.wishProductTable.isEmpty());
+        //Assert.assertTrue(wishListPage.wishProductTable.size() > 0);
         BrowserUtils.waitFor(2);
     }
-    @And("The user clicks on the first product`s Remove button")
-    public void The_user_clicks_on_the_first_product_s_Remove_button() {
+    @And("The user clicks on the first products Remove button")
+    public void The_user_clicks_on_the_first_products_Remove_button() {
         wishListPage.remove_Btn.click();
         BrowserUtils.waitFor(2);
     }
@@ -38,8 +35,8 @@ public class WishListStepDefinitions {
         BrowserUtils.waitFor(2);
     }
 
-    @And("The user clicks on the first product`s Add button")
-    public void The_user_clicks_on_the_first_product_s_Add_button() {
+    @And("The user clicks on the first products Add button")
+    public void The_user_clicks_on_the_first_products_Add_button() {
         wishListPage.AddToCartBtn.click();
         BrowserUtils.waitFor(2);
     }

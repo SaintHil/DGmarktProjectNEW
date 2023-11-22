@@ -42,8 +42,8 @@ public class EditAccountStepDefinitions {
 
     }
 
-    @When("The user clicks on Continue button")
-    public void the_user_clicks_on_continue_button() {
+    @When("The user click on Continue button")
+    public void the_user_click_on_continue_button() {
         editAccountPage.continueBtn.click();
         BrowserUtils.waitFor(2);
     }

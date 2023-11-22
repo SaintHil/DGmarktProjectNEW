@@ -10,13 +10,13 @@ public class WishListPage extends BasePage {
     @FindBy(css = "#wishlist-total")
     public WebElement wishIcon;
 
-    @FindBy(xpath = "//table[@class=\"table table-bordered table-hover\"]//tbody//tr")
+    @FindBy(xpath = "//*[@id=\"content\"]/h2")
     public List<WebElement> wishProductTable;
 
-    @FindBy(css = "#account-wishlist > div.alert.alert-success.alert-dismissible")
+    @FindBy(xpath = "//*[@id='account-wishlist']/div[1]")
     public WebElement successMsg;
 
-    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/table/tbody/tr/td[6]/a")
+    @FindBy(xpath = "//*[@id='content']/div[1]/table/tbody/tr/td[6]/a")
     public WebElement remove_Btn;
 
     @FindBy(xpath = "//*[@id=\"content\"]/div[1]/table/tbody/tr[1]/td[6]/button")

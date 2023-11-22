@@ -52,13 +52,19 @@ public class EditAccountPage extends BasePage{
         telephone_Btn.clear();BrowserUtils.waitFor(2);
         telephone_Btn.sendKeys("123456");
     }
-    public void verifyMessage(String expectedMessage) {
-        WebElement element = Driver.get().findElement((By.xpath("//*[text()='"+ expectedMessage +"']")));
-        BrowserUtils.waitFor(1);
+    public void verifySuccesMessage(String expectedMessage) {
+        WebElement element = Driver.get().findElement((By.xpath(" //div[text()=' Success: Your account has been successfully updated.']")));
+        BrowserUtils.waitFor(2);
         String actualMessage = element.getText();
         System.out.println("actualMessage = " + actualMessage);
         assertEquals(actualMessage, expectedMessage);
-
+    }
+    public void verifyMessage(String expectedMessage) {
+        WebElement element = Driver.get().findElement((By.xpath("//*[text()='"+expectedMessage +"']")));
+        BrowserUtils.waitFor(2);
+        String actualMessage = element.getText();
+        System.out.println("actualMessage = " + actualMessage);
+        assertEquals(actualMessage, expectedMessage);
     }
     /**Getting POP-UP messages
      * and control that if contains valid or @*/

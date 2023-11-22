@@ -22,8 +22,7 @@ public class EditAccountStepDefinitions {
     }
     @Then("Verify that you can receive a my account verification message {string}")
     public void verify_that_you_can_receive_a_my_account_verification_message(String message) {
-        BrowserUtils.waitFor(1);
-        editAccountPage.verifyMessage(message);
+        editAccountPage.verifySuccesMessage(message);
     }
     @When("The user clicks on {string} box,{string} box,{string} box,{string} box select enters invalid data")
     public void the_user_clicks_on_box_box_box_box_select_enters_invalid_data(String FirstName, String LastName , String Email, String Telephone) {

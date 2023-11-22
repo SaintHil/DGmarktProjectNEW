@@ -3,6 +3,7 @@ Feature: Like Icon (Wish list) Function
 
   Background: The user is on home page
     Given The user is logged in with valid credentials "sainthill599@gmail.com" and "123ABC"
+    And The user clicks on the Wish List
 
   @D2DGMRT-32
   Scenario:The User should be able to see products in the Wish List

@@ -3,7 +3,7 @@ package com.dgmarkt.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class EditPasswordPage {
+public class EditPasswordPage extends BasePage{
 
     @FindBy(xpath = "//a[@title='My Account']/..")
     public WebElement myAccountBtn;

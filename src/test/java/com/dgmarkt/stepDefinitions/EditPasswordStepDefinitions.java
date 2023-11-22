@@ -15,7 +15,7 @@ public class EditPasswordStepDefinitions extends BasePage {
 
     @When("The user clicks on My Account")
     public void the_user_clicks_on_my_account() {
-        editPasswordPage.myAccount_Btn.click();
+        editPasswordPage.myAccountBtn.click();
         BrowserUtils.waitFor(2);
     }
 

@@ -1,7 +1,7 @@
 package com.dgmarkt.stepDefinitions;
 
-
 import com.dgmarkt.pages.EditAccountPage;
+import com.dgmarkt.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -46,6 +46,4 @@ public class EditAccountStepDefinitions {
     editAccountPage.getDisappearingWarningMessage(message);
     }
 }
-
-
 

@@ -36,11 +36,7 @@ public class EditAccountStepDefinitions {
     public void the_use_standardizes_login_data() {
         editAccountPage.dataStandardizesLogin();
     }
-    @Given("The user clicks on my account in the my account subcategory")
-    public void the_user_clicks_on_my_account_in_the_my_account_subcategory() {
-        editAccountPage.myAccount_Btn.click();
-        editAccountPage.childMyAccountBtn.click();
-    }
+
     @Then("The warning message contains {string}")
     public void theWarningMessageContainsMessage(String message) {
     editAccountPage.getDisappearingWarningMessage(message);

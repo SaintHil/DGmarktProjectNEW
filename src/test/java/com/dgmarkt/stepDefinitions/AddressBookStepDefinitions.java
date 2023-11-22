@@ -11,10 +11,8 @@ public class AddressBookStepDefinitions {
 
     @Given("The user clicks on my account in the my account subcategory")
     public void the_user_clicks_on_my_account_in_the_my_account_subcategory() {
-        addressBookPage.myAccount_Btn.click();
-        addressBookPage.getMyAccount_Btn.click();
+           addressBookPage.myAccount_mtd();
     }
-
     @Given("The user clicks Adress Book button")
     public void the_user_clicks_adress_book_button() {
         addressBookPage.adressBook_Btn.click();

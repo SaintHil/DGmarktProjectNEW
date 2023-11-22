@@ -14,10 +14,6 @@ import java.util.List;
 import static com.dgmarkt.utilities.Driver.driver;
 
 public class AddressBookPage extends BasePage{
-        @FindBy(xpath = "//a[@title='My Account']/..")
-        public WebElement myAccount_Btn;
-        @FindBy(xpath = "(//a[text()='My Account'])[1]")
-        public WebElement getMyAccount_Btn;
         @FindBy(xpath = "//a[text()='Address Book']")
         public WebElement adressBook_Btn;
         @FindBy(xpath = "//a[text()='Edit']")

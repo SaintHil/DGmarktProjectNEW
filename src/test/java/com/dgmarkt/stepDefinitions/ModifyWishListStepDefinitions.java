@@ -17,8 +17,9 @@ public class ModifyWishListStepDefinitions {
 
     WishListPage wishListPage = new WishListPage();
     @When("The user clicks to My Account button under My Account submenu")
-    public void the_user_clicks_to_my_account_button_under_my_account_submenu() {
-       wishListPage.subMyAccountBtn.click();
+    public void the_user_clicks_to_my_account_button_under_my_account() {
+        wishListPage.myAccount_Btn.click();
+        wishListPage.subMyAccountBtn.click();
     }
     @When("The user clicks to Wish List button on the Account page")
     public void the_user_clicks_to_wish_list_button_on_the_account_page() {
@@ -43,9 +44,5 @@ public class ModifyWishListStepDefinitions {
     @Then("Verify that the user sees successfully modified message")
     public void verify_that_the_user_sees_successfully_modified_message() {
         Assert.assertTrue(wishListPage.successMsg.getText().contains("Success: You have modified"));
-    }
-    @Given("The user is logged in with credentials {string} and {string}")
-    public void the_user_is_logged_in_with_credentials_and(String email, String password) {
-
     }
 }

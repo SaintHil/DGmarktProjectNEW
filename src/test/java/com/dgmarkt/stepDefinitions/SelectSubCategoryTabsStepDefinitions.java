@@ -21,10 +21,5 @@ public class SelectSubCategoryTabsStepDefinitions {
     @Then("Verify that the user sees the {string}")
     public void verify_that_the_user_sees_the(String subCategoryPageText){
         categoryPage.verifySubCategory(subCategoryPageText);
-
-    }
-
-    @Given("The user is logged in with valid credentials {string} and {string}")
-    public void theUserIsLoggedInWithValidCredentialsAnd(String email, String password) {
     }
 }

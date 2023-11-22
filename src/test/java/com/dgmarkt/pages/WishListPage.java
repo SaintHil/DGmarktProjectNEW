@@ -24,4 +24,10 @@ public class WishListPage extends BasePage {
 
     @FindBy(css = "#account-wishlist > div.alert.alert-fix.alert-success.alert-dismissible")
     public WebElement successMsgAddToCart;
+
+    @FindBy(xpath = "(//a[text()='Wish List'])[1]")
+    public WebElement wishListBtn_InAccountPage;
+
+    @FindBy(xpath = "//a[text()='My Wish List']")
+    public WebElement myWishListPageText;
 }

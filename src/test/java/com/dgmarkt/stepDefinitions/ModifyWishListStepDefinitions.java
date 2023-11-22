@@ -15,14 +15,7 @@ import org.junit.Assert;
 
 public class ModifyWishListStepDefinitions {
 
-    LoginPage loginPage = new LoginPage();
-    HomePage homePage = new HomePage();
     WishListPage wishListPage = new WishListPage();
-
-//    @When("The user clicks to My Account button on Home page")
-//    public void the_user_clicks_to_my_account_button_on_home_page() throws InterruptedException {
-//        homePage.myAccount_Btn.click();
-//    }
     @When("The user clicks to My Account button under My Account submenu")
     public void the_user_clicks_to_my_account_button_under_my_account_submenu() {
        wishListPage.subMyAccountBtn.click();
@@ -37,18 +30,18 @@ public class ModifyWishListStepDefinitions {
     }
     @And("The user clicks to add product button")
     public void the_user_clicks_to_add_product_button() {
-        wishListPage.addProduct.click();
+        wishListPage.AddToCartBtn.click();
     }
     @Then("Verify that the user sees success message")
     public void verify_that_the_user_sees_success_message() {
-        Assert.assertTrue(wishListPage.addProductSuccessMessage.getText().contains("Success"));
+        Assert.assertTrue(wishListPage.successMsgAddToCart.getText().contains("Success"));
     }
     @And("The user clicks to delete product button")
     public void the_user_clicks_to_delete_product_button() {
-        wishListPage.deleteProduct.click();
+        wishListPage.remove_Btn.click();
     }
     @Then("Verify that the user sees successfully modified message")
     public void verify_that_the_user_sees_successfully_modified_message() {
-        Assert.assertTrue(wishListPage.deleteProductSuccessMessage.getText().contains("Success: You have modified"));
+        Assert.assertTrue(wishListPage.successMsg.getText().contains("Success: You have modified"));
     }
 }

@@ -1,4 +1,4 @@
-
+@D2DGMRT-13
 Feature: Modify Wish List
 
   Background:The user is on the home page
@@ -15,10 +15,10 @@ Feature: Modify Wish List
     Then Verify that the user sees the My Wish List
 
   Scenario: The user modifies to My Wish List by adding product to Cart
-    And The user clicks to add product button
+    When The user clicks to add product button
     Then Verify that the user sees success message
 
   Scenario: The user modifies to My Wish List by deleting product from My Wish List
-    And The user clicks to delete product button
+    When The user clicks to delete product button
     Then Verify that the user sees successfully modified message
 

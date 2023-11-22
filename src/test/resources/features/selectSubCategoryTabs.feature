@@ -1,4 +1,4 @@
-@smn
+
 Feature: Select Sub Category Tabs under Category Module
 
   Background:The user is on the home page

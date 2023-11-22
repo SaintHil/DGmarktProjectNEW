@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class WishListPage extends BasePage{
 
-
     @FindBy(xpath = "(//a[text()='My Account'])[1]")
     public WebElement subMyAccountBtn;
 
@@ -15,26 +14,21 @@ public class WishListPage extends BasePage{
     @FindBy(xpath = "//a[text()='My Wish List']")
     public WebElement myWishListPageText;
 
-    @FindBy(xpath = "//td[text()='Cello C1920FS 19\" LED-backlit LCD TV']//following::i[1]")
-    public WebElement addProductCelloTv;
+    @FindBy(css = "#account-wishlist > div.alert.alert-success.alert-dismissible")
+    public WebElement successMsg;
 
-    @FindBy(xpath = "//td[text()='Cello C1920FS 19\" LED-backlit LCD TV']//following::i[2]")
-    public WebElement deleteProductCelloTv;
+    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/table/tbody/tr/td[6]/a")
+    public WebElement remove_Btn;
 
-    @FindBy(xpath = "//div[contains(text(),'Success')]")
-    public WebElement addProductSuccessMessage;
+    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/table/tbody/tr[1]/td[6]/button")
+    public WebElement AddToCartBtn;
 
-    @FindBy(xpath = "//div[contains(text(),'Success: You have modified')]")
-    public WebElement deleteProductSuccessMessage;
-
-    @FindBy(xpath = "(//i[@class='fa fa-shopping-cart'])[1]")
-    public WebElement addProduct;
-
-    @FindBy(xpath = "(//i[@class='fa fa-times'])[1]")
-    public WebElement deleteProduct;
-
-
-
-
-
+    @FindBy(css = "#account-wishlist > div.alert.alert-fix.alert-success.alert-dismissible")
+    public WebElement successMsgAddToCart;
 }
+
+
+
+
+
+

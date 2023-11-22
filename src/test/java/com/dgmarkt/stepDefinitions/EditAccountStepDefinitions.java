@@ -41,8 +41,6 @@ public class EditAccountStepDefinitions {
         editAccountPage.myAccount_Btn.click();
         editAccountPage.childMyAccountBtn.click();
     }
-
-
     @Then("The warning message contains {string}")
     public void theWarningMessageContainsMessage(String message) {
     editAccountPage.getDisappearingWarningMessage(message);

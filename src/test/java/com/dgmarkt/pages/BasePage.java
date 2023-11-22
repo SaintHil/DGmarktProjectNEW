@@ -23,5 +23,9 @@ public abstract class BasePage {
     public WebElement logout_Btn;
     @FindBy(xpath = "//a[text()='My Account'][1]")
     public WebElement myAccountShow_Btn;
+    public void myAccount_mtd(){
+        myAccount_Btn.click();
+        myAccountShow_Btn.click();
+    }
 
 }

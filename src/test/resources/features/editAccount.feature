@@ -3,6 +3,8 @@ Feature: My account edit Functionality
 
   Background: The user is on home page
     Given The user is logged in with valid credentials "nesibe@ogux.sss" and "test1234"
+    And The user clicks on my account in the my account subcategory
+    And The user clicks on the Edit Account button
   @D2DGMRT-45
   Scenario Outline: The user should be able to update the My Account on the DgMarkt website.
     When The user clicks on "<FirstName>" box,"<LastName>" box,"<Email>" box,"<Telephone>" box select enters valid data

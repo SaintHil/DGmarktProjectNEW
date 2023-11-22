@@ -32,12 +32,16 @@ public class EditAccountPage extends BasePage{
     public WebElement emailRedWarningMessage;
     public void editMyAccountLogin(String firstName, String lastName, String email, String telefon){
         firstName_Btn.clear();
+        BrowserUtils.waitFor(1);
         firstName_Btn.sendKeys(firstName);
         lastName_Btn.clear();
+        BrowserUtils.waitFor(1);
         lastName_Btn.sendKeys(lastName);
         email_Btn.clear();
+        BrowserUtils.waitFor(1);
         email_Btn.sendKeys(email);
         telephone_Btn.clear();
+        BrowserUtils.waitFor(1);
         telephone_Btn.sendKeys(telefon);
     }
     public void dataStandardizesLogin(){

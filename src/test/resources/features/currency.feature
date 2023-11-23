@@ -3,11 +3,7 @@ Feature: Currency Functionality
 
 
   Background: The user logs in for login panel
-    Given The user navigate to web page
-    And The user enters login panel credential and clicks login button
-    And The user closes cookies page
-    And The user clicks the login under the my account
-    And The user enters account credentials "aysegun@gmail.com" and "Test_1234" and clicks login
+    Given The user is logged in with valid credentials "aysegun@gmail.com" and "Test_1234"
 
 
   @D2DGMRT-48

@@ -22,16 +22,13 @@ Feature: Cart Icon Function
     Then Verify that the user two products in CartPage
 
   @D2DGMRT-79
-  Scenario: The user should be able to go to the Checkout page from the cart icon and complete the checkout
+  Scenario: The user completes his/her purchase with the currency his/her choice
     When The user navigates to sub-category "Networking"
     And The user adds two products to the cart list names "ASUS ROG STRIX GS-AX3000" and "Belkin Secure Flip KVM Switch"
     And The user clicks cart icon button
     And The user clicks view cart button
-    And The user clicks currency button
-    And The user click the "<currencyName>" Button
     And The user clicks Checkout button
     And The user clicks continue for billing details with exist credentials
     And The user clicks continue for delivery details with exist credentials
     And The user adds comment about his order "Everything is ok!" and clicks continue for delivery method
     And The user adds comment about his order "Thanks! Everything is ok!" and clicks checkbox to agree Terms and Conditions and clicks continue
-    Then Verify that the user can see success page

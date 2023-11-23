@@ -13,7 +13,6 @@ import org.junit.Assert;
 public class ModifyWishListStepDefinitions {
 
     WishListPage wishListPage = new WishListPage();
-    EditPasswordPage editPasswordPage=new EditPasswordPage();
 
     @When("The user clicks to Wish List button on the Account page")
     public void the_user_clicks_to_wish_list_button_on_the_account_page() {

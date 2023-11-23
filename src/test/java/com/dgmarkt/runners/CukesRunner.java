@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/dgmarkt/stepDefinitions",
         dryRun = false,
-        tags = "@D2DGMRT-4"
+        tags = "@D2DGMRT-7"
 
      
 

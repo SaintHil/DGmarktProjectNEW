@@ -2,11 +2,7 @@
 Feature: Cart Icon Function
 
   Background: The user is on home page
-    Given The user navigate to web page
-    And The user enters login panel credential and clicks login button
-    And The user closes cookies page
-    And The user clicks the login under the my account
-    When The user enters account credentials "serkan35@dgmarkt.com" and "12345" and clicks login
+    Given The user is logged in with valid credentials "serkan35@dgmarkt.com" and "12345"
 
   @D2DGMRT-77
   Scenario: The user should be able to see added product list by click cart icon

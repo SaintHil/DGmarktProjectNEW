@@ -14,11 +14,7 @@ public class ModifyWishListStepDefinitions {
 
     WishListPage wishListPage = new WishListPage();
     EditPasswordPage editPasswordPage=new EditPasswordPage();
-    @When("The user clicks to My Account button under My Account submenu")
-    public void the_user_clicks_to_my_account_button_under_my_account() {
-        wishListPage.myAccount_Btn.click();
-        editPasswordPage.myAccountBtnUnderMyAccount.click();
-    }
+
     @When("The user clicks to Wish List button on the Account page")
     public void the_user_clicks_to_wish_list_button_on_the_account_page() {
         wishListPage.wishListBtn_InAccountPage.click();

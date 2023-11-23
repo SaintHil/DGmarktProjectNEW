@@ -4,10 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class EditPasswordPage extends BasePage{
-    @FindBy(xpath = "//a[@title='My Account']/..")
-    public WebElement myAccountBtn;
-    @FindBy(xpath = "(//a[text()='My Account'])[1]")
-    public WebElement myAccountBtnUnderMyAccount;
     @FindBy(xpath = "//a[text()='Change your password']")
     public WebElement changeYourPasswordLink;
     @FindBy(xpath = "//*[@id='input-password']")

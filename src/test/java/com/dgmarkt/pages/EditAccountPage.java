@@ -11,8 +11,6 @@ import static org.junit.Assert.assertTrue;
 public class EditAccountPage extends BasePage{
     @FindBy(xpath= "//input[@id='input-email']")
     public WebElement email_inputBtn;
-    @FindBy(xpath= "(//a[text()='My Account'])[1]")
-    public WebElement childMyAccountBtn;
     @FindBy(xpath= "//a[text()='Edit Account']")
     public WebElement editAccountBtn;
     @FindBy(xpath= "//input[@id='input-firstname']")

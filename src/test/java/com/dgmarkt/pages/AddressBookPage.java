@@ -22,8 +22,6 @@ public class AddressBookPage extends BasePage{
         public WebElement delete_Btn;
         @FindBy(xpath = "(//a[text()='Delete'])[2]")
         public WebElement delete_BtnIndex;
-        @FindBy(css = ".btn.btn-danger")
-        public List<WebElement> delete_BtnList;
         @FindBy(xpath = "//a[text()='New Address']")
         public WebElement newAdress_Btn;
         @FindBy(xpath = "//a[text()='Back']")

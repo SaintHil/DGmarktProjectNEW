@@ -3,7 +3,7 @@ Feature: Modify Wish List
 
   Background: The user is on home page
     Given The user is logged in with valid credentials "veliali@gmail.com" and "12341234"
-    And The user clicks to My Account button under My Account submenu
+    And The user clicks on my account in the my account subcategory
     And The user clicks to Wish List button on the Account page
 
   @D2DGMRT-42

@@ -62,6 +62,11 @@ public class BrowserUtils {
         Actions actions = new Actions(Driver.get());
         actions.moveToElement(element).perform();
     }
+    public static void hoverAndClick(WebElement menu,WebElement subMenu) {
+        Actions actions = new Actions(Driver.get());
+        actions.moveToElement(menu).perform();
+        actions.click(subMenu).perform();
+    }
 
     /**
      * return a list of string from a list of elements

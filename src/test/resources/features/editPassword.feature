@@ -3,9 +3,7 @@ Feature: Edit Password
 
   Background: The user is on home page
     Given The user is logged in with valid credentials "sainthill599@gmail.com" and "123ABC"
-
-    When The user clicks on My Account
-    And The user clicks on My Account under My Account
+    And The user clicks on my account in the my account subcategory
     And The user clicks on Change Password link
 
   @D2DGMRT-40
